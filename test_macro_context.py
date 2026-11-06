@@ -1,6 +1,6 @@
 import unittest
 from datetime import datetime,timezone,date
-from collect_macro_context import parse_series,collect,SERIES,read_series,parse_series_page
+from collect_macro_context import parse_series,collect,SERIES,read_series,parse_series_page,read_fred_api
 class MacroContextTests(unittest.TestCase):
     def test_latest_nonfuture(self):
         data=b'DATE,INDPRO\n2026-10-01,101.5\n2026-11-01,102.5\n2026-12-01,103.5\n'
@@ -24,6 +24,23 @@ class MacroContextTests(unittest.TestCase):
         self.assertEqual(len(r['series']),4)
         self.assertFalse(r['release_dates_verified'])
         self.assertTrue(all(v['publication_date'] is None for v in r['series'].values()))
+    def test_api_output_never_contains_credential(self):
+        import io
+        raw = b'{"observations":[{"date":"2026-11-05","value":"."},{"date":"2026-11-04","value":"3.32"}]}'
+        def opener(req, timeout):
+            self.assertIn('api_key=test-only-value', req.full_url)
+            return io.BytesIO(raw)
+        day, value, public_url = read_fred_api('BAMLH0A0HYM2', date(2026,11,5), opener, 'test-only-value')
+        self.assertEqual((day, value), (date(2026,11,4), 3.32))
+        self.assertNotIn('api_key', public_url)
+        self.assertNotIn('test-only-value', public_url)
+
+    def test_api_error_does_not_publish_request_url(self):
+        def fail(req, timeout):
+            raise OSError(req.full_url)
+        with self.assertRaisesRegex(ValueError, r'^FRED API request failed [(]OSError[)]$'):
+            read_fred_api('INDPRO', date(2026,11,5), fail, 'test-only-value')
+
     def test_archive_fallback_requires_requested_vintage(self):
         import io
         now = datetime(2026, 11, 6, 3, tzinfo=timezone.utc)

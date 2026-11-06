@@ -5,9 +5,11 @@ observations are intentionally excluded from scored Weekly Regime evidence.
 """
 import csv
 import io
+import os
 import json
 import re
 import urllib.request
+from urllib.parse import urlencode
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -40,6 +42,32 @@ def parse_series(raw, series_id, as_of):
         raise ValueError('No usable historical observations')
     return max(observations,key=lambda r:r[0])
 
+def read_fred_api(sid, as_of, opener, api_key):
+    params = {'series_id': sid, 'file_type': 'json', 'sort_order': 'desc',
+              'observation_end': as_of.isoformat(), 'limit': 24}
+    public_url = 'https://api.stlouisfed.org/fred/series/observations?' + urlencode(params)
+    request = urllib.request.Request(public_url + '&' + urlencode({'api_key': api_key}))
+    # Keep the credential out of source links, saved exceptions and public receipts.
+    try:
+        with opener(request, timeout=25) as response:
+            raw = response.read(200_001)
+        if len(raw) > 200_000:
+            raise ValueError('Oversized response')
+        rows = json.loads(raw)['observations']
+        observations = []
+        for row in rows:
+            if row.get('value') == '.':
+                continue
+            day = date.fromisoformat(row['date'])
+            value = float(row['value'])
+            if day <= as_of and abs(value) < 1e12:
+                observations.append((day, value))
+        day, value = max(observations)
+        return day, value, public_url
+    except (OSError, ValueError, TypeError, KeyError) as exc:
+        raise ValueError('FRED API request failed (' + type(exc).__name__ + ')') from None
+
+
 def read_series(sid, now, opener):
     day = now.date()
     start = (day - timedelta(days=366)).isoformat()
@@ -48,6 +76,12 @@ def read_series(sid, now, opener):
                    f'?cosd={start}&vintage_date={vintage.isoformat()}&id={sid}')
     page_url = f'https://fred.stlouisfed.org/series/{sid}'
     failures = []
+    api_key = os.getenv('FRED_API_KEY')
+    if api_key:
+        try:
+            return read_fred_api(sid, day, opener, api_key)
+        except ValueError as exc:
+            failures.append(str(exc))
     sources = [('FRED CSV', URL.format(start, sid), sid),
                ('ALFRED vintage CSV', archive_url, f'{sid}_{vintage:%Y%m%d}'),
                ('FRED series page', page_url, None)]
