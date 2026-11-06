@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2026-11-06T04:08:03.831307+00:00",
+  "as_of_utc": "2026-11-06T04:14:32.239237+00:00",
   "pipeline": "REPORTS_BUILT",
   "treasury_status": "DAILY_NOMINAL_RATE_CONTEXT_ONLY",
   "macro_context_status": "CONTEXT_UNAVAILABLE",
@@ -11,9 +11,9 @@
   "collector_run_verified": false,
   "macro_collection_reconciliation": {
     "latest_attempt_status": "FAILED",
-    "latest_attempt_utc": "2026-11-06T04:06:23.536267+00:00",
+    "latest_attempt_utc": "2026-11-06T04:10:31.801342+00:00",
     "snapshot_utc": "2026-11-06T03:11:59.150771+00:00",
-    "snapshot_age_hours": 0.93,
+    "snapshot_age_hours": 1.04,
     "snapshot_status": "CURRENT_CONTEXT_ONLY",
     "latest_attempt_produced_snapshot": false,
     "latest_attempt_success": false,

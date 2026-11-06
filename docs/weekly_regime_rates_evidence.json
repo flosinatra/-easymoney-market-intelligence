@@ -3,7 +3,7 @@
   "status": "DAILY_NOMINAL_RATE_CONTEXT_ONLY",
   "source": "U.S. Treasury daily par yield curve",
   "observation_date": "2026-11-05",
-  "retrieved_at_utc": "2026-11-06T04:06:23.389012+00:00",
+  "retrieved_at_utc": "2026-11-06T04:10:31.652534+00:00",
   "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value_month=202611",
   "observations": {
     "2-year_yield_percent": 4.46,
