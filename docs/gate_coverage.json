@@ -5,7 +5,7 @@
     {
       "name": "Cross-Asset Confirmation",
       "field_count": 22,
-      "verified_daily_observations": 0,
+      "verified_daily_observations": 6,
       "audit_status_counts": {
         "Local": 1,
         "Candidate, untested": 8,
@@ -25,43 +25,43 @@
           "cell": "B2",
           "field": "US30Y Yield",
           "audit_status": "Candidate, untested",
-          "evidence_status": "NOT_VERIFIED",
-          "value": null
+          "evidence_status": "DAILY_OBSERVATION_ONLY",
+          "value": 5.25
         },
         {
           "cell": "C2",
           "field": "US10Y Yield",
           "audit_status": "Candidate, untested",
-          "evidence_status": "NOT_VERIFIED",
-          "value": null
+          "evidence_status": "DAILY_OBSERVATION_ONLY",
+          "value": 4.84
         },
         {
           "cell": "D2",
           "field": "US05Y Yield",
           "audit_status": "Candidate, untested",
-          "evidence_status": "NOT_VERIFIED",
-          "value": null
+          "evidence_status": "DAILY_OBSERVATION_ONLY",
+          "value": 4.59
         },
         {
           "cell": "E2",
           "field": "US02Y Yield",
           "audit_status": "Candidate, untested",
-          "evidence_status": "NOT_VERIFIED",
-          "value": null
+          "evidence_status": "DAILY_OBSERVATION_ONLY",
+          "value": 4.46
         },
         {
           "cell": "F2",
           "field": "US01Y Yield",
           "audit_status": "Candidate, untested",
-          "evidence_status": "NOT_VERIFIED",
-          "value": null
+          "evidence_status": "DAILY_OBSERVATION_ONLY",
+          "value": 4.28
         },
         {
           "cell": "G2",
           "field": "US03M Yield",
           "audit_status": "Candidate, untested",
-          "evidence_status": "NOT_VERIFIED",
-          "value": null
+          "evidence_status": "DAILY_OBSERVATION_ONLY",
+          "value": 4.17
         },
         {
           "cell": "H2",
@@ -957,7 +957,7 @@
       }
     ]
   },
-  "treasury_observation_date": null,
+  "treasury_observation_date": "2026-11-05",
   "live_market_data_verified": false,
   "all_gates_complete": false
 }

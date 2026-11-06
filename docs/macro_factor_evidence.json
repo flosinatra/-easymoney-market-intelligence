@@ -18,7 +18,12 @@
     "Rates": {
       "status": "MISSING_VERIFIED_EVIDENCE",
       "observations": [],
-      "rejected": [],
+      "rejected": [
+        "invalid_or_future_dated",
+        "invalid_or_future_dated",
+        "invalid_or_future_dated",
+        "invalid_or_future_dated"
+      ],
       "score_1_to_5": null
     },
     "Credit": {
