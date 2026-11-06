@@ -1,0 +1,127 @@
+﻿Worksheet,Header cell,Original field,Field class,Provider / origin candidate,Verification status,Integrity / handling requirement
+Cross-Asset Confirmation,A2,Date,Record metadata,Internal,Local,Preserve observation and publication times separately
+Cross-Asset Confirmation,B2,US30Y Yield,Official macro series,U.S. Treasury / FRED (series dependent),"Candidate, untested",Daily publication is not live intraday pricing; confirm units
+Cross-Asset Confirmation,C2,US10Y Yield,Official macro series,U.S. Treasury / FRED (series dependent),"Candidate, untested",Daily publication is not live intraday pricing; confirm units
+Cross-Asset Confirmation,D2,US05Y Yield,Official macro series,U.S. Treasury / FRED (series dependent),"Candidate, untested",Daily publication is not live intraday pricing; confirm units
+Cross-Asset Confirmation,E2,US02Y Yield,Official macro series,U.S. Treasury / FRED (series dependent),"Candidate, untested",Daily publication is not live intraday pricing; confirm units
+Cross-Asset Confirmation,F2,US01Y Yield,Official macro series,U.S. Treasury / FRED (series dependent),"Candidate, untested",Daily publication is not live intraday pricing; confirm units
+Cross-Asset Confirmation,G2,US03M Yield,Official macro series,U.S. Treasury / FRED (series dependent),"Candidate, untested",Daily publication is not live intraday pricing; confirm units
+Cross-Asset Confirmation,H2,US01M Yield ,Unclassified / inspect source,Not established,Unresolved,No automatic mapping assumed
+Cross-Asset Confirmation,I2,10Y Real Yield,Official macro series,U.S. Treasury / FRED (series dependent),"Candidate, untested",Daily publication is not live intraday pricing; confirm units
+Cross-Asset Confirmation,J2,"10Y Treasury Inflation Index
+",Unclassified / inspect source,Not established,Unresolved,No automatic mapping assumed
+Cross-Asset Confirmation,K2,DXY,Market quote / derived market quote,Authorized exchange/vendor; calculate ratio where applicable,Unresolved,"Verify licensing, venue, contract, delay and event time"
+Cross-Asset Confirmation,L2,VIX,Market quote / derived market quote,Authorized exchange/vendor; calculate ratio where applicable,Unresolved,"Verify licensing, venue, contract, delay and event time"
+Cross-Asset Confirmation,M2,HY OAS,Official published credit series,FRED / ICE BofA published series,"Candidate, untested",Frequency and usage rights must be checked
+Cross-Asset Confirmation,N2,Credit=HYG/IEF,Market quote / derived market quote,Authorized exchange/vendor; calculate ratio where applicable,Unresolved,"Verify licensing, venue, contract, delay and event time"
+Cross-Asset Confirmation,O2,WTI,Market quote / derived market quote,Authorized exchange/vendor; calculate ratio where applicable,Unresolved,"Verify licensing, venue, contract, delay and event time"
+Cross-Asset Confirmation,P2,Copper,Market quote / derived market quote,Authorized exchange/vendor; calculate ratio where applicable,Unresolved,"Verify licensing, venue, contract, delay and event time"
+Cross-Asset Confirmation,Q2,Gold,Market quote / derived market quote,Authorized exchange/vendor; calculate ratio where applicable,Unresolved,"Verify licensing, venue, contract, delay and event time"
+Cross-Asset Confirmation,R2,Stock Market Breadth,Market quote / derived market quote,Authorized exchange/vendor; calculate ratio where applicable,Unresolved,"Verify licensing, venue, contract, delay and event time"
+Cross-Asset Confirmation,S2,Rates Read,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Cross-Asset Confirmation,T2,Credit Read,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Cross-Asset Confirmation,U2,Risk Tone,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Cross-Asset Confirmation,V2,Institutional Read,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Weekly Regime,A2,Week of Date,Record metadata,Internal,Local,Preserve observation and publication times separately
+Weekly Regime,B2,Growth 1-5,Regime score / formula,Official releases + source-defined judgment; Excel formula for mean,Partially defined,Preserve 1–5 broad risk-support meaning; no invented score thresholds
+Weekly Regime,C2,Inflation 1-5,Regime score / formula,Official releases + source-defined judgment; Excel formula for mean,Partially defined,Preserve 1–5 broad risk-support meaning; no invented score thresholds
+Weekly Regime,D2,Rates 1-5,Regime score / formula,Official releases + source-defined judgment; Excel formula for mean,Partially defined,Preserve 1–5 broad risk-support meaning; no invented score thresholds
+Weekly Regime,E2,Credit 1-5,Regime score / formula,Official releases + source-defined judgment; Excel formula for mean,Partially defined,Preserve 1–5 broad risk-support meaning; no invented score thresholds
+Weekly Regime,F2,Liquidity 1-5,Regime score / formula,Official releases + source-defined judgment; Excel formula for mean,Partially defined,Preserve 1–5 broad risk-support meaning; no invented score thresholds
+Weekly Regime,G2,Growth Evidence,Evidence synthesis,BLS / BEA / Fed / Treasury / CFTC as applicable,"Candidate, untested","Actual, prior, consensus, publication date and revisions separately"
+Weekly Regime,H2,Inflation Evidence,Evidence synthesis,BLS / BEA / Fed / Treasury / CFTC as applicable,"Candidate, untested","Actual, prior, consensus, publication date and revisions separately"
+Weekly Regime,I2,Rates Evidence,Evidence synthesis,BLS / BEA / Fed / Treasury / CFTC as applicable,"Candidate, untested","Actual, prior, consensus, publication date and revisions separately"
+Weekly Regime,J2,Credit Evidence,Evidence synthesis,BLS / BEA / Fed / Treasury / CFTC as applicable,"Candidate, untested","Actual, prior, consensus, publication date and revisions separately"
+Weekly Regime,K2,Liquidity Evidence,Evidence synthesis,BLS / BEA / Fed / Treasury / CFTC as applicable,"Candidate, untested","Actual, prior, consensus, publication date and revisions separately"
+Weekly Regime,L2,Regime Score,Regime score / formula,Official releases + source-defined judgment; Excel formula for mean,Partially defined,Preserve 1–5 broad risk-support meaning; no invented score thresholds
+Weekly Regime,M2,Regime,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Weekly Regime,N2,Lead Driver,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Weekly Regime,O2,Failure #1,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Weekly Regime,P2,Failure #2,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Weekly Regime,Q2,Notes,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Futures Translation,A2,Date,Record metadata,Internal,Local,Preserve observation and publication times separately
+Futures Translation,B2,Market,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Futures Translation,C2,Spot Price,Market quote / derived market quote,Authorized exchange/vendor; calculate ratio where applicable,Unresolved,"Verify licensing, venue, contract, delay and event time"
+Futures Translation,D2,Spot Thesis,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Futures Translation,E2,Direction,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Futures Translation,F2,Futures Contract,Futures contract / derived research,Exchange specifications and authorized futures market data,Unresolved,"Contract month, settlement vs last trade, timestamp and roll policy"
+Futures Translation,G2,Futures Price,Market quote / derived market quote,Authorized exchange/vendor; calculate ratio where applicable,Unresolved,"Verify licensing, venue, contract, delay and event time"
+Futures Translation,H2,Days Till Expiration,Futures contract / derived research,Exchange specifications and authorized futures market data,Unresolved,"Contract month, settlement vs last trade, timestamp and roll policy"
+Futures Translation,I2,Convergence Pressure,Futures contract / derived research,Exchange specifications and authorized futures market data,Unresolved,"Contract month, settlement vs last trade, timestamp and roll policy"
+Futures Translation,J2,Basis,Futures contract / derived research,Exchange specifications and authorized futures market data,Unresolved,"Contract month, settlement vs last trade, timestamp and roll policy"
+Futures Translation,K2,Basis Percentage,Futures contract / derived research,Exchange specifications and authorized futures market data,Unresolved,"Contract month, settlement vs last trade, timestamp and roll policy"
+Futures Translation,L2,Curve,Futures contract / derived research,Exchange specifications and authorized futures market data,Unresolved,"Contract month, settlement vs last trade, timestamp and roll policy"
+Futures Translation,M2,Front vs Back Month Spread,Market quote / derived market quote,Authorized exchange/vendor; calculate ratio where applicable,Unresolved,"Verify licensing, venue, contract, delay and event time"
+Futures Translation,N2,Carry / Fair Value Context,Futures contract / derived research,Exchange specifications and authorized futures market data,Unresolved,"Contract month, settlement vs last trade, timestamp and roll policy"
+Futures Translation,O2,OI Read,Futures contract / derived research,Exchange specifications and authorized futures market data,Unresolved,"Contract month, settlement vs last trade, timestamp and roll policy"
+Futures Translation,P2,Volume Read,Futures contract / derived research,Exchange specifications and authorized futures market data,Unresolved,"Contract month, settlement vs last trade, timestamp and roll policy"
+Futures Translation,Q2,Volatility Regime,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Futures Translation,R2,Basis Risk,Futures contract / derived research,Exchange specifications and authorized futures market data,Unresolved,"Contract month, settlement vs last trade, timestamp and roll policy"
+Futures Translation,S2,Translated Futures Level,Futures contract / derived research,Exchange specifications and authorized futures market data,Unresolved,"Contract month, settlement vs last trade, timestamp and roll policy"
+Futures Translation,T2,Translation Confidence,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Futures Translation,U2,Cross-Asset Confirm?,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Futures Translation,V2,Technical Location,Execution / user controlled,Existing trading process,Out of automated intelligence scope,Do not auto-complete
+Futures Translation,W2,Structural Stop,Execution / user controlled,Existing trading process,Out of automated intelligence scope,Do not auto-complete
+Futures Translation,X2,Target,Execution / user controlled,Existing trading process,Out of automated intelligence scope,Do not auto-complete
+Futures Translation,Y2,R:R,Unclassified / inspect source,Not established,Unresolved,No automatic mapping assumed
+Futures Translation,Z2,Permission / Notes,Execution / user controlled,Existing trading process,Out of automated intelligence scope,Do not auto-complete
+Options Translation,A2,Date,Record metadata,Internal,Local,Preserve observation and publication times separately
+Options Translation,B2,Underlying,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Options Translation,C2,Direction,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Options Translation,D2,Magnitude,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Options Translation,E2,Timing Days,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Options Translation,F2,IV %,Options metric / derived judgment,Authorized options chain and methodology,Unresolved,Quote synchronization and methodology required
+Options Translation,G2,HV %,Options metric / derived judgment,Authorized options chain and methodology,Unresolved,Quote synchronization and methodology required
+Options Translation,H2,IV-HV,Options metric / derived judgment,Authorized options chain and methodology,Unresolved,Quote synchronization and methodology required
+Options Translation,I2,Expected Move,Options metric / derived judgment,Authorized options chain and methodology,Unresolved,Quote synchronization and methodology required
+Options Translation,J2,Skew Read,Options metric / derived judgment,Authorized options chain and methodology,Unresolved,Quote synchronization and methodology required
+Options Translation,K2,Term Structure,Options metric / derived judgment,Authorized options chain and methodology,Unresolved,Quote synchronization and methodology required
+Options Translation,L2,Delta Goal,Options metric / derived judgment,Authorized options chain and methodology,Unresolved,Quote synchronization and methodology required
+Options Translation,M2,Gamma Need,Options metric / derived judgment,Authorized options chain and methodology,Unresolved,Quote synchronization and methodology required
+Options Translation,N2,Theta Tolerance,Options metric / derived judgment,Authorized options chain and methodology,Unresolved,Quote synchronization and methodology required
+Options Translation,O2,Vega View,Options metric / derived judgment,Authorized options chain and methodology,Unresolved,Quote synchronization and methodology required
+Options Translation,P2,Selected Structure,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Options Translation,Q2,Max Loss,Unclassified / inspect source,Not established,Unresolved,No automatic mapping assumed
+Options Translation,R2,Max Profit,Unclassified / inspect source,Not established,Unresolved,No automatic mapping assumed
+Options Translation,S2,Why This Structure,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Pre-Trade Gate,A2,Date,Record metadata,Internal,Local,Preserve observation and publication times separately
+Pre-Trade Gate,B2,Market,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Pre-Trade Gate,C2,Fundamental Thesis,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Pre-Trade Gate,D2,Macro Pass,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Pre-Trade Gate,E2,Cross-Asset Pass,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Pre-Trade Gate,F2,Derivative Pass,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Pre-Trade Gate,G2,Technical Pass,Execution / user controlled,Existing trading process,Out of automated intelligence scope,Do not auto-complete
+Pre-Trade Gate,H2,Bull %,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Pre-Trade Gate,I2,Base %,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Pre-Trade Gate,J2,Bear %,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Pre-Trade Gate,K2,Win Prob %,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Pre-Trade Gate,L2,Entry,Execution / user controlled,Existing trading process,Out of automated intelligence scope,Do not auto-complete
+Pre-Trade Gate,M2,Stop,Execution / user controlled,Existing trading process,Out of automated intelligence scope,Do not auto-complete
+Pre-Trade Gate,N2,Target,Execution / user controlled,Existing trading process,Out of automated intelligence scope,Do not auto-complete
+Pre-Trade Gate,O2,Risk/Unit,Execution / user controlled,Existing trading process,Out of automated intelligence scope,Do not auto-complete
+Pre-Trade Gate,P2,Account Equity,Execution / user controlled,Existing trading process,Out of automated intelligence scope,Do not auto-complete
+Pre-Trade Gate,Q2,Risk Cap %,Execution / user controlled,Existing trading process,Out of automated intelligence scope,Do not auto-complete
+Pre-Trade Gate,R2,Max $ Risk,Execution / user controlled,Existing trading process,Out of automated intelligence scope,Do not auto-complete
+Pre-Trade Gate,S2,Max Units,Execution / user controlled,Existing trading process,Out of automated intelligence scope,Do not auto-complete
+Pre-Trade Gate,T2,Planned R:R,Execution / user controlled,Existing trading process,Out of automated intelligence scope,Do not auto-complete
+Pre-Trade Gate,U2,Failure #1,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Pre-Trade Gate,V2,Failure #2,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Pre-Trade Gate,W2,Final Thesis,Research judgment / synthesis,Multiple timestamped sources + existing EasyMoney methodology,Methodology-dependent,Never infer unsupported status or fabricate probabilities
+Trade Review,A2,Date,Journal / user supplied,User journal,Not automated,User entered after trade
+Trade Review,B2,Market,Journal / user supplied,User journal,Not automated,User entered after trade
+Trade Review,C2,Direction,Journal / user supplied,User journal,Not automated,User entered after trade
+Trade Review,D2,Result $,Journal / user supplied,User journal,Not automated,User entered after trade
+Trade Review,E2,R Multiple,Journal / user supplied,User journal,Not automated,User entered after trade
+Trade Review,F2,Thesis Correct?,Journal / user supplied,User journal,Not automated,User entered after trade
+Trade Review,G2,Regime Read,Journal / user supplied,User journal,Not automated,User entered after trade
+Trade Review,H2,Expectation Gap Read,Journal / user supplied,User journal,Not automated,User entered after trade
+Trade Review,I2,Vehicle Choice,Journal / user supplied,User journal,Not automated,User entered after trade
+Trade Review,J2,Volatility Read,Journal / user supplied,User journal,Not automated,User entered after trade
+Trade Review,K2,Entry Location,Journal / user supplied,User journal,Not automated,User entered after trade
+Trade Review,L2,Risk Discipline,Journal / user supplied,User journal,Not automated,User entered after trade
+Trade Review,M2,MAE (R),Journal / user supplied,User journal,Not automated,User entered after trade
+Trade Review,N2,MFE (R),Journal / user supplied,User journal,Not automated,User entered after trade
+Trade Review,O2,Behavior Error?,Journal / user supplied,User journal,Not automated,User entered after trade
+Trade Review,P2,Process Grade,Journal / user supplied,User journal,Not automated,User entered after trade
+Trade Review,Q2,Lesson,Journal / user supplied,User journal,Not automated,User entered after trade
+Trade Review,R2,Next Adjustment,Journal / user supplied,User journal,Not automated,User entered after trade
