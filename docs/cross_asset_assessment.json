@@ -5,7 +5,7 @@
   "execution_status": "NOT_ASSESSED",
   "source": "U.S. Treasury daily par yields",
   "observation_date": "2026-11-05",
-  "retrieved_at_utc": "2026-11-06T04:21:42.965769+00:00",
+  "retrieved_at_utc": "2026-11-06T10:28:18.111547+00:00",
   "curve_spreads_basis_points": {
     "10Y minus 2Y": 38.0,
     "10Y minus 3M": 67.0

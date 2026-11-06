@@ -1,14 +1,60 @@
 {
-  "retrieved_at_utc": "2026-11-06T03:11:59.150771+00:00",
+  "retrieved_at_utc": "2026-11-06T10:28:18.470084+00:00",
   "provider": "Federal Reserve Bank of St. Louis (FRED)",
   "release_dates_verified": false,
-  "series": {},
-  "errors": {
-    "Growth": "<urlopen error [Errno -3] Temporary failure in name resolution>",
-    "Inflation": "<urlopen error [Errno -3] Temporary failure in name resolution>",
-    "Credit": "<urlopen error [Errno -3] Temporary failure in name resolution>",
-    "Liquidity": "<urlopen error [Errno -3] Temporary failure in name resolution>"
+  "series": {
+    "Growth": {
+      "series_id": "INDPRO",
+      "indicator": "Industrial Production Index",
+      "value": 103.9506,
+      "unit": "index",
+      "observation_date": "2026-09-01",
+      "retrieved_at_utc": "2026-11-06T10:28:18.470084+00:00",
+      "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?cosd=2025-11-05&id=INDPRO",
+      "publication_date": null,
+      "publication_date_verified": false,
+      "status": "CONTEXT_ONLY_RELEASE_DATE_UNVERIFIED"
+    },
+    "Inflation": {
+      "series_id": "CPIAUCSL",
+      "indicator": "Consumer Price Index for All Urban Consumers",
+      "value": 336.298,
+      "unit": "index",
+      "observation_date": "2026-09-01",
+      "retrieved_at_utc": "2026-11-06T10:28:18.470084+00:00",
+      "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?cosd=2025-11-05&id=CPIAUCSL",
+      "publication_date": null,
+      "publication_date_verified": false,
+      "status": "CONTEXT_ONLY_RELEASE_DATE_UNVERIFIED"
+    },
+    "Credit": {
+      "series_id": "BAMLH0A0HYM2",
+      "indicator": "ICE BofA US High Yield Option-Adjusted Spread",
+      "value": 3.32,
+      "unit": "percentage points",
+      "observation_date": "2026-11-04",
+      "retrieved_at_utc": "2026-11-06T10:28:18.470084+00:00",
+      "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?cosd=2025-11-05&id=BAMLH0A0HYM2",
+      "publication_date": null,
+      "publication_date_verified": false,
+      "status": "CONTEXT_ONLY_RELEASE_DATE_UNVERIFIED"
+    },
+    "Liquidity": {
+      "series_id": "WALCL",
+      "indicator": "Federal Reserve Total Assets",
+      "value": 6748145.0,
+      "unit": "millions of USD",
+      "observation_date": "2026-11-04",
+      "retrieved_at_utc": "2026-11-06T10:28:18.470084+00:00",
+      "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?cosd=2025-11-05&id=WALCL",
+      "publication_date": null,
+      "publication_date_verified": false,
+      "status": "CONTEXT_ONLY_RELEASE_DATE_UNVERIFIED"
+    }
   },
-  "warning": "FRED observation dates are NOT verified publication dates; no Weekly Regime score is derived.",
-  "status": "CONTEXT_UNAVAILABLE"
+  "errors": {},
+  "warning": "Each series has its own retrieval timestamp. Retained rows are NOT newly collected.",
+  "status": "CONTEXT_COLLECTED_UNSCORED",
+  "new_series_count": 4,
+  "retained_series_count": 0
 }

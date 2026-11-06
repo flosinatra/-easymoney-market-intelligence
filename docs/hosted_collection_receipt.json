@@ -1,14 +1,9 @@
 {
-  "attempted_at_utc": "2026-11-06T04:21:42.965530+00:00",
+  "attempted_at_utc": "2026-11-06T10:28:18.111390+00:00",
   "treasury": "COLLECTION_SUCCEEDED",
   "treasury_observation_date": "2026-11-05",
-  "macro": "COLLECTION_FAILED_OR_UNVERIFIED",
-  "macro_collected_series": 0,
-  "macro_failed_factors": [
-    "Credit",
-    "Growth",
-    "Inflation",
-    "Liquidity"
-  ],
+  "macro": "COMPLETE",
+  "macro_collected_series": 4,
+  "macro_failed_factors": [],
   "pipeline": "REPORTS_BUILT_NOT_GATE_PASSED"
 }
