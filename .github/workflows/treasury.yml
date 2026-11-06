@@ -1,0 +1,92 @@
+name: Treasury daily evidence
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['docs/**']
+  workflow_dispatch:
+  schedule:
+    - cron: '15 23 * * 1-5'
+concurrency:
+  group: easymoney-publication
+  cancel-in-progress: false
+permissions:
+  contents: read
+jobs:
+  collect:
+    permissions:
+      contents: write
+    outputs:
+      attempt: ${{ steps.receipt.outputs.attempt }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install workflow test dependency
+        run: python -m pip install PyYAML==6.0.3
+      - name: Verify deployment package
+        run: python deployment_preflight.py
+      - name: Validate research engine before publishing
+        run: python -m unittest discover -q
+      - name: Collect sources independently and publish evidence reports
+        run: python hosted_run.py
+      - name: Publish workbook field coverage
+        run: python gate_coverage.py
+      - name: Assess Treasury curve context
+        run: python cross_asset_assessment.py
+      - name: Commit validated snapshot
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- docs/
+          git diff --cached --quiet || (git commit -m 'Update Treasury evidence' && git push)
+      - name: Identify collection attempt
+        id: receipt
+        run: python -c "import json; print('attempt=' + json.load(open('docs/hosted_collection_receipt.json'))['attempted_at_utc'])" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+  deploy:
+    needs: collect
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.publish.outputs.page_url }}
+    steps:
+      - name: Publish dashboard
+        id: publish
+        uses: actions/deploy-pages@v4
+      - name: Verify published dashboard and collection
+        env:
+          EXPECTED_ATTEMPT: ${{ needs.collect.outputs.attempt }}
+          PAGE_URL: ${{ steps.publish.outputs.page_url }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from urllib.request import urlopen
+          from urllib.parse import urljoin
+          base = os.environ['PAGE_URL'].rstrip('/') + '/'
+          def read(path):
+              with urlopen(urljoin(base, path) + '?run=' + os.environ['GITHUB_RUN_ID'], timeout=30) as response:
+                  return response.read()
+          def document(path):
+              return json.loads(read(path))
+          assert b'EasyMoney' in read('index.html')
+          receipt = document('hosted_collection_receipt.json')
+          treasury = document('treasury.json')
+          macro = document('macro_context.json')
+          status = document('pipeline_status.json')
+          print(json.dumps(receipt, indent=2))
+          assert receipt['attempted_at_utc'] == os.environ['EXPECTED_ATTEMPT']
+          assert receipt['treasury'] == 'COLLECTION_SUCCEEDED' and receipt['macro'] == 'COMPLETE'
+          assert receipt['pipeline'] == 'REPORTS_BUILT_NOT_GATE_PASSED'
+          assert treasury['observation_date'] == receipt['treasury_observation_date']
+          assert any(isinstance(v, (int, float)) for v in treasury['yields_percent'].values())
+          assert status['collector_run_verified'] and status['macro_context_available_factors'] == 4
+          assert {s['series_id'] for s in macro['series'].values()} == {'INDPRO','CPIAUCSL','BAMLH0A0HYM2','WALCL'}
+          assert all(s['retrieved_at_utc'] == macro['retrieved_at_utc'] for s in macro['series'].values())
+          PY
