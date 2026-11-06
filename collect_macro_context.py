@@ -7,7 +7,7 @@ import csv
 import io
 import json
 import urllib.request
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from collection_health import receipt, write_json_atomic
 
@@ -17,7 +17,7 @@ SERIES = {
     'Credit': ('BAMLH0A0HYM2', 'ICE BofA US High Yield Option-Adjusted Spread', 'percentage points'),
     'Liquidity': ('WALCL', 'Federal Reserve Total Assets', 'millions of USD'),
 }
-URL = 'https://fred.stlouisfed.org/graph/fredgraph.csv?id={}'
+URL = 'https://fred.stlouisfed.org/graph/fredgraph.csv?cosd={}&id={}'
 
 def parse_series(raw, series_id, as_of):
     rows = csv.DictReader(io.StringIO(raw.decode('utf-8-sig')))
@@ -46,10 +46,10 @@ def collect(now=None, opener=None):
             'release_dates_verified':False,'series':{},'errors':{},
             'warning':'FRED observation dates are NOT verified publication dates; no Weekly Regime score is derived.'}
     for factor,(sid,label,unit) in SERIES.items():
-        url=URL.format(sid)
+        url=URL.format((now.date() - timedelta(days=366)).isoformat(), sid)
         try:
             req=urllib.request.Request(url,headers={'User-Agent':'EasyMoneyResearchCollector/0.17'})
-            with (opener or urllib.request.urlopen)(req,timeout=25) as response:
+            with (opener or urllib.request.urlopen)(req,timeout=60) as response:
                 raw=response.read(3_000_001)
             if len(raw)>3_000_000: raise ValueError('Response too large')
             day,value=parse_series(raw,sid,now.date())
