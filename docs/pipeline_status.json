@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2026-11-06T04:14:32.239237+00:00",
+  "as_of_utc": "2026-11-06T04:20:20.906261+00:00",
   "pipeline": "REPORTS_BUILT",
   "treasury_status": "DAILY_NOMINAL_RATE_CONTEXT_ONLY",
   "macro_context_status": "CONTEXT_UNAVAILABLE",
@@ -11,9 +11,9 @@
   "collector_run_verified": false,
   "macro_collection_reconciliation": {
     "latest_attempt_status": "FAILED",
-    "latest_attempt_utc": "2026-11-06T04:10:31.801342+00:00",
+    "latest_attempt_utc": "2026-11-06T04:15:20.098089+00:00",
     "snapshot_utc": "2026-11-06T03:11:59.150771+00:00",
-    "snapshot_age_hours": 1.04,
+    "snapshot_age_hours": 1.14,
     "snapshot_status": "CURRENT_CONTEXT_ONLY",
     "latest_attempt_produced_snapshot": false,
     "latest_attempt_success": false,
@@ -23,10 +23,10 @@
   },
   "macro_collection_status": "FAILED",
   "macro_collection_errors": {
-    "Growth": "The read operation timed out",
-    "Inflation": "The read operation timed out",
-    "Credit": "The read operation timed out",
-    "Liquidity": "The read operation timed out"
+    "Growth": "FRED CSV: The read operation timed out | ALFRED vintage CSV: The read operation timed out | FRED series page: The read operation timed out",
+    "Inflation": "FRED CSV: The read operation timed out | ALFRED vintage CSV: The read operation timed out | FRED series page: The read operation timed out",
+    "Credit": "FRED CSV: The read operation timed out | ALFRED vintage CSV: The read operation timed out | FRED series page: The read operation timed out",
+    "Liquidity": "FRED CSV: The read operation timed out | ALFRED vintage CSV: The read operation timed out | FRED series page: The read operation timed out"
   },
   "source_note": "No 1\u20135 macro score is inferred from Treasury observations."
 }

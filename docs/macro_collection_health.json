@@ -1,5 +1,5 @@
 {
-  "attempted_at_utc": "2026-11-06T04:10:31.801342+00:00",
+  "attempted_at_utc": "2026-11-06T04:15:20.098089+00:00",
   "collection_status": "FAILED",
   "collected_series": 0,
   "expected_series": 4,
@@ -10,10 +10,10 @@
     "Liquidity"
   ],
   "errors": {
-    "Growth": "The read operation timed out",
-    "Inflation": "The read operation timed out",
-    "Credit": "The read operation timed out",
-    "Liquidity": "The read operation timed out"
+    "Growth": "FRED CSV: The read operation timed out | ALFRED vintage CSV: The read operation timed out | FRED series page: The read operation timed out",
+    "Inflation": "FRED CSV: The read operation timed out | ALFRED vintage CSV: The read operation timed out | FRED series page: The read operation timed out",
+    "Credit": "FRED CSV: The read operation timed out | ALFRED vintage CSV: The read operation timed out | FRED series page: The read operation timed out",
+    "Liquidity": "FRED CSV: The read operation timed out | ALFRED vintage CSV: The read operation timed out | FRED series page: The read operation timed out"
   },
   "release_dates_verified": false,
   "macro_scores_available": false
