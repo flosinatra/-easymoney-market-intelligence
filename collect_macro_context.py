@@ -6,9 +6,11 @@ observations are intentionally excluded from scored Weekly Regime evidence.
 import csv
 import io
 import json
+import re
 import urllib.request
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 from collection_health import receipt, write_json_atomic
 
 SERIES = {
@@ -38,6 +40,55 @@ def parse_series(raw, series_id, as_of):
         raise ValueError('No usable historical observations')
     return max(observations,key=lambda r:r[0])
 
+def read_series(sid, now, opener):
+    day = now.date()
+    start = (day - timedelta(days=366)).isoformat()
+    vintage = now.astimezone(ZoneInfo('America/Chicago')).date()
+    archive_url = ('https://alfred.stlouisfed.org/graph/alfredgraph.csv'
+                   f'?cosd={start}&vintage_date={vintage.isoformat()}&id={sid}')
+    page_url = f'https://fred.stlouisfed.org/series/{sid}'
+    failures = []
+    sources = [('FRED CSV', URL.format(start, sid), sid),
+               ('ALFRED vintage CSV', archive_url, f'{sid}_{vintage:%Y%m%d}'),
+               ('FRED series page', page_url, None)]
+    for name, url, column in sources:
+        try:
+            req = urllib.request.Request(url, headers={'User-Agent': 'EasyMoneyResearchCollector/0.25'})
+            with opener(req, timeout=25) as response:
+                raw = response.read(3_000_001)
+            if len(raw) > 3_000_000:
+                raise ValueError('Response too large')
+            if column:
+                observed, value = parse_series(raw, column, day)
+            else:
+                observed, value = parse_series_page(raw, url, day)
+            return observed, value, url
+        except (OSError, ValueError) as exc:
+            failures.append(f'{name}: {exc}')
+    raise ValueError(' | '.join(failures))
+
+
+def parse_series_page(raw, expected_url, as_of):
+    page = raw.decode('utf-8')
+    if f'<link rel="canonical" href="{expected_url}">' not in page:
+        raise ValueError('FRED series identity mismatch')
+    period = re.search(r'<meta name="dcterms:PeriodOfTime" content="start:[0-9-]+; end:([0-9-]+);">', page)
+    quotes = re.findall(r'([^<>]+):\s*<span class="series-meta-observation-value">([0-9.,-]+)</span>', page)
+    if not period or not quotes:
+        raise ValueError('Missing FRED observation')
+    observed = date.fromisoformat(period.group(1))
+    values = {float(number.replace(',', '')) for _, number in quotes}
+    labels = {label.strip() for label, _ in quotes}
+    dates = {observed.strftime('%b %Y'), observed.strftime('%Y-%m-%d'),
+             observed.strftime('%b %d, %Y'), observed.strftime('%b %d, %Y').replace(' 0', ' ')}
+    if observed > as_of or len(values) != 1 or not labels.issubset(dates):
+        raise ValueError('Inconsistent FRED observation')
+    value = values.pop()
+    if abs(value) >= 1e12:
+        raise ValueError('Invalid FRED value')
+    return observed, value
+
+
 def collect(now=None, opener=None):
     now=now or datetime.now(timezone.utc)
     if now.tzinfo is None:
@@ -46,13 +97,8 @@ def collect(now=None, opener=None):
             'release_dates_verified':False,'series':{},'errors':{},
             'warning':'FRED observation dates are NOT verified publication dates; no Weekly Regime score is derived.'}
     for factor,(sid,label,unit) in SERIES.items():
-        url=URL.format((now.date() - timedelta(days=366)).isoformat(), sid)
         try:
-            req=urllib.request.Request(url,headers={'User-Agent':'EasyMoneyResearchCollector/0.17'})
-            with (opener or urllib.request.urlopen)(req,timeout=60) as response:
-                raw=response.read(3_000_001)
-            if len(raw)>3_000_000: raise ValueError('Response too large')
-            day,value=parse_series(raw,sid,now.date())
+            day, value, url = read_series(sid, now, opener or urllib.request.urlopen)
             result['series'][factor]={'series_id':sid,'indicator':label,'value':value,'unit':unit,
                 'observation_date':day.isoformat(),'retrieved_at_utc':now.isoformat(),
                 'source_url':url,'publication_date':None,'publication_date_verified':False,
