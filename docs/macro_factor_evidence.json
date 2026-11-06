@@ -1,0 +1,40 @@
+{
+  "as_of": "2026-11-06",
+  "gate": "Weekly Regime",
+  "status": "EVIDENCE_INCOMPLETE",
+  "factors": {
+    "Growth": {
+      "status": "MISSING_VERIFIED_EVIDENCE",
+      "observations": [],
+      "rejected": [],
+      "score_1_to_5": null
+    },
+    "Inflation": {
+      "status": "MISSING_VERIFIED_EVIDENCE",
+      "observations": [],
+      "rejected": [],
+      "score_1_to_5": null
+    },
+    "Rates": {
+      "status": "MISSING_VERIFIED_EVIDENCE",
+      "observations": [],
+      "rejected": [],
+      "score_1_to_5": null
+    },
+    "Credit": {
+      "status": "MISSING_VERIFIED_EVIDENCE",
+      "observations": [],
+      "rejected": [],
+      "score_1_to_5": null
+    },
+    "Liquidity": {
+      "status": "MISSING_VERIFIED_EVIDENCE",
+      "observations": [],
+      "rejected": [],
+      "score_1_to_5": null
+    }
+  },
+  "scores": null,
+  "regime_score": null,
+  "method": "Preserve workbook 1\u20135 scores and five-factor mean"
+}

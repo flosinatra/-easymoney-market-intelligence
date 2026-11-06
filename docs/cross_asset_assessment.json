@@ -1,0 +1,16 @@
+{
+  "version": "0.10",
+  "gate": "Cross-Asset Confirmation",
+  "gate_result": "NOT_ASSESSED",
+  "execution_status": "NOT_ASSESSED",
+  "source": "U.S. Treasury daily par yields",
+  "observation_date": null,
+  "retrieved_at_utc": null,
+  "curve_spreads_basis_points": {},
+  "evidence_status": "UNVERIFIED",
+  "limitations": [
+    "Daily nominal Treasury yields only",
+    "No real yields, credit, dollar, VIX, commodities or live futures confirmation",
+    "Curve shape is context, not a directional trade signal"
+  ]
+}

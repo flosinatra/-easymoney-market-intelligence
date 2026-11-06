@@ -1,0 +1,21 @@
+{
+  "gate": "Weekly Regime",
+  "gate_result": "NOT_ASSESSED",
+  "factor_scores": {},
+  "factor_evidence": {},
+  "regime_score": null,
+  "regime": null,
+  "lead_driver": null,
+  "failures": [],
+  "notes": null,
+  "missing": [
+    "Growth 1-5",
+    "Inflation 1-5",
+    "Rates 1-5",
+    "Credit 1-5",
+    "Liquidity 1-5"
+  ],
+  "invalid": [],
+  "week_of": "2026-11-02",
+  "method": "Arithmetic mean of five existing 1\u20135 broad-risk-support scores"
+}

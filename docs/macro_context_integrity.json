@@ -1,0 +1,18 @@
+{
+  "status": "CONTEXT_UNAVAILABLE",
+  "retrieved_at_utc": "2026-11-06T03:11:59.150771+00:00",
+  "factors": {
+    "Growth": "MISSING",
+    "Inflation": "MISSING",
+    "Credit": "MISSING",
+    "Liquidity": "MISSING"
+  },
+  "available_factors": 0,
+  "missing_factors": [
+    "Growth",
+    "Inflation",
+    "Credit",
+    "Liquidity"
+  ],
+  "warning": "FRED observation dates do not establish release timing; no scores derived."
+}

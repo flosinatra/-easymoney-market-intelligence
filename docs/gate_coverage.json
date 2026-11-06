@@ -1,0 +1,963 @@
+{
+  "version": "0.9",
+  "purpose": "Workbook field coverage, not trading signals",
+  "gates": [
+    {
+      "name": "Cross-Asset Confirmation",
+      "field_count": 22,
+      "verified_daily_observations": 0,
+      "audit_status_counts": {
+        "Local": 1,
+        "Candidate, untested": 8,
+        "Unresolved": 9,
+        "Methodology-dependent": 4
+      },
+      "gate_result": "NOT_ASSESSED",
+      "fields": [
+        {
+          "cell": "A2",
+          "field": "Date",
+          "audit_status": "Local",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "B2",
+          "field": "US30Y Yield",
+          "audit_status": "Candidate, untested",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "C2",
+          "field": "US10Y Yield",
+          "audit_status": "Candidate, untested",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "D2",
+          "field": "US05Y Yield",
+          "audit_status": "Candidate, untested",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "E2",
+          "field": "US02Y Yield",
+          "audit_status": "Candidate, untested",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "F2",
+          "field": "US01Y Yield",
+          "audit_status": "Candidate, untested",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "G2",
+          "field": "US03M Yield",
+          "audit_status": "Candidate, untested",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "H2",
+          "field": "US01M Yield",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "I2",
+          "field": "10Y Real Yield",
+          "audit_status": "Candidate, untested",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "J2",
+          "field": "10Y Treasury Inflation Index",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "K2",
+          "field": "DXY",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "L2",
+          "field": "VIX",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "M2",
+          "field": "HY OAS",
+          "audit_status": "Candidate, untested",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "N2",
+          "field": "Credit=HYG/IEF",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "O2",
+          "field": "WTI",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "P2",
+          "field": "Copper",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "Q2",
+          "field": "Gold",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "R2",
+          "field": "Stock Market Breadth",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "S2",
+          "field": "Rates Read",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "T2",
+          "field": "Credit Read",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "U2",
+          "field": "Risk Tone",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "V2",
+          "field": "Institutional Read",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "Weekly Regime",
+      "field_count": 17,
+      "verified_daily_observations": 0,
+      "audit_status_counts": {
+        "Local": 1,
+        "Partially defined": 6,
+        "Candidate, untested": 5,
+        "Methodology-dependent": 5
+      },
+      "gate_result": "NOT_ASSESSED",
+      "fields": [
+        {
+          "cell": "A2",
+          "field": "Week of Date",
+          "audit_status": "Local",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "B2",
+          "field": "Growth 1-5",
+          "audit_status": "Partially defined",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "C2",
+          "field": "Inflation 1-5",
+          "audit_status": "Partially defined",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "D2",
+          "field": "Rates 1-5",
+          "audit_status": "Partially defined",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "E2",
+          "field": "Credit 1-5",
+          "audit_status": "Partially defined",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "F2",
+          "field": "Liquidity 1-5",
+          "audit_status": "Partially defined",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "G2",
+          "field": "Growth Evidence",
+          "audit_status": "Candidate, untested",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "H2",
+          "field": "Inflation Evidence",
+          "audit_status": "Candidate, untested",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "I2",
+          "field": "Rates Evidence",
+          "audit_status": "Candidate, untested",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "J2",
+          "field": "Credit Evidence",
+          "audit_status": "Candidate, untested",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "K2",
+          "field": "Liquidity Evidence",
+          "audit_status": "Candidate, untested",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "L2",
+          "field": "Regime Score",
+          "audit_status": "Partially defined",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "M2",
+          "field": "Regime",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "N2",
+          "field": "Lead Driver",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "O2",
+          "field": "Failure #1",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "P2",
+          "field": "Failure #2",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "Q2",
+          "field": "Notes",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "Futures Translation",
+      "field_count": 26,
+      "verified_daily_observations": 0,
+      "audit_status_counts": {
+        "Local": 1,
+        "Methodology-dependent": 6,
+        "Unresolved": 15,
+        "Out of automated intelligence scope": 4
+      },
+      "gate_result": "NOT_ASSESSED",
+      "fields": [
+        {
+          "cell": "A2",
+          "field": "Date",
+          "audit_status": "Local",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "B2",
+          "field": "Market",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "C2",
+          "field": "Spot Price",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "D2",
+          "field": "Spot Thesis",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "E2",
+          "field": "Direction",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "F2",
+          "field": "Futures Contract",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "G2",
+          "field": "Futures Price",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "H2",
+          "field": "Days Till Expiration",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "I2",
+          "field": "Convergence Pressure",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "J2",
+          "field": "Basis",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "K2",
+          "field": "Basis Percentage",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "L2",
+          "field": "Curve",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "M2",
+          "field": "Front vs Back Month Spread",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "N2",
+          "field": "Carry / Fair Value Context",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "O2",
+          "field": "OI Read",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "P2",
+          "field": "Volume Read",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "Q2",
+          "field": "Volatility Regime",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "R2",
+          "field": "Basis Risk",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "S2",
+          "field": "Translated Futures Level",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "T2",
+          "field": "Translation Confidence",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "U2",
+          "field": "Cross-Asset Confirm?",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "V2",
+          "field": "Technical Location",
+          "audit_status": "Out of automated intelligence scope",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "W2",
+          "field": "Structural Stop",
+          "audit_status": "Out of automated intelligence scope",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "X2",
+          "field": "Target",
+          "audit_status": "Out of automated intelligence scope",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "Y2",
+          "field": "R:R",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "Z2",
+          "field": "Permission / Notes",
+          "audit_status": "Out of automated intelligence scope",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "Options Translation",
+      "field_count": 19,
+      "verified_daily_observations": 0,
+      "audit_status_counts": {
+        "Local": 1,
+        "Methodology-dependent": 6,
+        "Unresolved": 12
+      },
+      "gate_result": "NOT_ASSESSED",
+      "fields": [
+        {
+          "cell": "A2",
+          "field": "Date",
+          "audit_status": "Local",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "B2",
+          "field": "Underlying",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "C2",
+          "field": "Direction",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "D2",
+          "field": "Magnitude",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "E2",
+          "field": "Timing Days",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "F2",
+          "field": "IV %",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "G2",
+          "field": "HV %",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "H2",
+          "field": "IV-HV",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "I2",
+          "field": "Expected Move",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "J2",
+          "field": "Skew Read",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "K2",
+          "field": "Term Structure",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "L2",
+          "field": "Delta Goal",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "M2",
+          "field": "Gamma Need",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "N2",
+          "field": "Theta Tolerance",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "O2",
+          "field": "Vega View",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "P2",
+          "field": "Selected Structure",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "Q2",
+          "field": "Max Loss",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "R2",
+          "field": "Max Profit",
+          "audit_status": "Unresolved",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "S2",
+          "field": "Why This Structure",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        }
+      ]
+    },
+    {
+      "name": "Pre-Trade Gate",
+      "field_count": 23,
+      "verified_daily_observations": 0,
+      "audit_status_counts": {
+        "Local": 1,
+        "Methodology-dependent": 12,
+        "Out of automated intelligence scope": 10
+      },
+      "gate_result": "NOT_ASSESSED",
+      "fields": [
+        {
+          "cell": "A2",
+          "field": "Date",
+          "audit_status": "Local",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "B2",
+          "field": "Market",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "C2",
+          "field": "Fundamental Thesis",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "D2",
+          "field": "Macro Pass",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "E2",
+          "field": "Cross-Asset Pass",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "F2",
+          "field": "Derivative Pass",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "G2",
+          "field": "Technical Pass",
+          "audit_status": "Out of automated intelligence scope",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "H2",
+          "field": "Bull %",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "I2",
+          "field": "Base %",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "J2",
+          "field": "Bear %",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "K2",
+          "field": "Win Prob %",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "L2",
+          "field": "Entry",
+          "audit_status": "Out of automated intelligence scope",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "M2",
+          "field": "Stop",
+          "audit_status": "Out of automated intelligence scope",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "N2",
+          "field": "Target",
+          "audit_status": "Out of automated intelligence scope",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "O2",
+          "field": "Risk/Unit",
+          "audit_status": "Out of automated intelligence scope",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "P2",
+          "field": "Account Equity",
+          "audit_status": "Out of automated intelligence scope",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "Q2",
+          "field": "Risk Cap %",
+          "audit_status": "Out of automated intelligence scope",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "R2",
+          "field": "Max $ Risk",
+          "audit_status": "Out of automated intelligence scope",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "S2",
+          "field": "Max Units",
+          "audit_status": "Out of automated intelligence scope",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "T2",
+          "field": "Planned R:R",
+          "audit_status": "Out of automated intelligence scope",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "U2",
+          "field": "Failure #1",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "V2",
+          "field": "Failure #2",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        },
+        {
+          "cell": "W2",
+          "field": "Final Thesis",
+          "audit_status": "Methodology-dependent",
+          "evidence_status": "NOT_VERIFIED",
+          "value": null
+        }
+      ]
+    }
+  ],
+  "journal": {
+    "name": "Trade Review",
+    "field_count": 18,
+    "verified_daily_observations": 0,
+    "audit_status_counts": {
+      "Not automated": 18
+    },
+    "gate_result": "NOT_ASSESSED",
+    "fields": [
+      {
+        "cell": "A2",
+        "field": "Date",
+        "audit_status": "Not automated",
+        "evidence_status": "NOT_VERIFIED",
+        "value": null
+      },
+      {
+        "cell": "B2",
+        "field": "Market",
+        "audit_status": "Not automated",
+        "evidence_status": "NOT_VERIFIED",
+        "value": null
+      },
+      {
+        "cell": "C2",
+        "field": "Direction",
+        "audit_status": "Not automated",
+        "evidence_status": "NOT_VERIFIED",
+        "value": null
+      },
+      {
+        "cell": "D2",
+        "field": "Result $",
+        "audit_status": "Not automated",
+        "evidence_status": "NOT_VERIFIED",
+        "value": null
+      },
+      {
+        "cell": "E2",
+        "field": "R Multiple",
+        "audit_status": "Not automated",
+        "evidence_status": "NOT_VERIFIED",
+        "value": null
+      },
+      {
+        "cell": "F2",
+        "field": "Thesis Correct?",
+        "audit_status": "Not automated",
+        "evidence_status": "NOT_VERIFIED",
+        "value": null
+      },
+      {
+        "cell": "G2",
+        "field": "Regime Read",
+        "audit_status": "Not automated",
+        "evidence_status": "NOT_VERIFIED",
+        "value": null
+      },
+      {
+        "cell": "H2",
+        "field": "Expectation Gap Read",
+        "audit_status": "Not automated",
+        "evidence_status": "NOT_VERIFIED",
+        "value": null
+      },
+      {
+        "cell": "I2",
+        "field": "Vehicle Choice",
+        "audit_status": "Not automated",
+        "evidence_status": "NOT_VERIFIED",
+        "value": null
+      },
+      {
+        "cell": "J2",
+        "field": "Volatility Read",
+        "audit_status": "Not automated",
+        "evidence_status": "NOT_VERIFIED",
+        "value": null
+      },
+      {
+        "cell": "K2",
+        "field": "Entry Location",
+        "audit_status": "Not automated",
+        "evidence_status": "NOT_VERIFIED",
+        "value": null
+      },
+      {
+        "cell": "L2",
+        "field": "Risk Discipline",
+        "audit_status": "Not automated",
+        "evidence_status": "NOT_VERIFIED",
+        "value": null
+      },
+      {
+        "cell": "M2",
+        "field": "MAE (R)",
+        "audit_status": "Not automated",
+        "evidence_status": "NOT_VERIFIED",
+        "value": null
+      },
+      {
+        "cell": "N2",
+        "field": "MFE (R)",
+        "audit_status": "Not automated",
+        "evidence_status": "NOT_VERIFIED",
+        "value": null
+      },
+      {
+        "cell": "O2",
+        "field": "Behavior Error?",
+        "audit_status": "Not automated",
+        "evidence_status": "NOT_VERIFIED",
+        "value": null
+      },
+      {
+        "cell": "P2",
+        "field": "Process Grade",
+        "audit_status": "Not automated",
+        "evidence_status": "NOT_VERIFIED",
+        "value": null
+      },
+      {
+        "cell": "Q2",
+        "field": "Lesson",
+        "audit_status": "Not automated",
+        "evidence_status": "NOT_VERIFIED",
+        "value": null
+      },
+      {
+        "cell": "R2",
+        "field": "Next Adjustment",
+        "audit_status": "Not automated",
+        "evidence_status": "NOT_VERIFIED",
+        "value": null
+      }
+    ]
+  },
+  "treasury_observation_date": null,
+  "live_market_data_verified": false,
+  "all_gates_complete": false
+}

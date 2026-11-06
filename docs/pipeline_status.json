@@ -1,0 +1,32 @@
+{
+  "as_of_utc": "2026-11-06T03:21:33.241035+00:00",
+  "pipeline": "REPORTS_BUILT",
+  "treasury_status": "UNVERIFIED",
+  "macro_context_status": "CONTEXT_UNAVAILABLE",
+  "macro_context_available_factors": 0,
+  "factor_evidence_status": "EVIDENCE_INCOMPLETE",
+  "weekly_regime_status": "NOT_ASSESSED",
+  "automated_macro_score_available": false,
+  "live_market_data_verified": false,
+  "collector_run_verified": false,
+  "macro_collection_reconciliation": {
+    "latest_attempt_status": "FAILED",
+    "latest_attempt_utc": "2026-11-06T03:21:33.256413+00:00",
+    "snapshot_utc": "2026-11-06T03:11:59.150771+00:00",
+    "snapshot_age_hours": 0.16,
+    "snapshot_status": "CURRENT_CONTEXT_ONLY",
+    "latest_attempt_produced_snapshot": false,
+    "latest_attempt_success": false,
+    "warnings": [
+      "Latest collection attempt timestamp missing or invalid"
+    ]
+  },
+  "macro_collection_status": "FAILED",
+  "macro_collection_errors": {
+    "Growth": "<urlopen error [Errno -3] Temporary failure in name resolution>",
+    "Inflation": "<urlopen error [Errno -3] Temporary failure in name resolution>",
+    "Credit": "<urlopen error [Errno -3] Temporary failure in name resolution>",
+    "Liquidity": "<urlopen error [Errno -3] Temporary failure in name resolution>"
+  },
+  "source_note": "No 1\u20135 macro score is inferred from Treasury observations."
+}

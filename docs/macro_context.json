@@ -1,0 +1,14 @@
+{
+  "retrieved_at_utc": "2026-11-06T03:11:59.150771+00:00",
+  "provider": "Federal Reserve Bank of St. Louis (FRED)",
+  "release_dates_verified": false,
+  "series": {},
+  "errors": {
+    "Growth": "<urlopen error [Errno -3] Temporary failure in name resolution>",
+    "Inflation": "<urlopen error [Errno -3] Temporary failure in name resolution>",
+    "Credit": "<urlopen error [Errno -3] Temporary failure in name resolution>",
+    "Liquidity": "<urlopen error [Errno -3] Temporary failure in name resolution>"
+  },
+  "warning": "FRED observation dates are NOT verified publication dates; no Weekly Regime score is derived.",
+  "status": "CONTEXT_UNAVAILABLE"
+}

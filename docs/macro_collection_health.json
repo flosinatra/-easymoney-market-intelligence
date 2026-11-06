@@ -1,0 +1,20 @@
+{
+  "attempted_at_utc": "2026-11-06T03:21:33.256413+00:00",
+  "collection_status": "FAILED",
+  "collected_series": 0,
+  "expected_series": 4,
+  "failed_factors": [
+    "Credit",
+    "Growth",
+    "Inflation",
+    "Liquidity"
+  ],
+  "errors": {
+    "Growth": "<urlopen error [Errno -3] Temporary failure in name resolution>",
+    "Inflation": "<urlopen error [Errno -3] Temporary failure in name resolution>",
+    "Credit": "<urlopen error [Errno -3] Temporary failure in name resolution>",
+    "Liquidity": "<urlopen error [Errno -3] Temporary failure in name resolution>"
+  },
+  "release_dates_verified": false,
+  "macro_scores_available": false
+}
