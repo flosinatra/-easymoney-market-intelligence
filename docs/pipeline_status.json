@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2026-11-06T10:28:19.665892+00:00",
+  "as_of_utc": "2026-11-06T23:48:28.299243+00:00",
   "pipeline": "REPORTS_BUILT",
   "treasury_status": "DAILY_NOMINAL_RATE_CONTEXT_ONLY",
   "macro_context_status": "CONTEXT_AVAILABLE_UNSCORED",
@@ -8,18 +8,25 @@
   "weekly_regime_status": "NOT_ASSESSED",
   "automated_macro_score_available": false,
   "live_market_data_verified": false,
-  "collector_run_verified": true,
+  "collector_run_verified": false,
   "macro_collection_reconciliation": {
-    "latest_attempt_status": "COMPLETE",
-    "latest_attempt_utc": "2026-11-06T10:28:18.470084+00:00",
+    "latest_attempt_status": "FAILED",
+    "latest_attempt_utc": "2026-11-06T23:43:27.667680+00:00",
     "snapshot_utc": "2026-11-06T10:28:18.470084+00:00",
-    "snapshot_age_hours": 0.0,
+    "snapshot_age_hours": 13.34,
     "snapshot_status": "CURRENT_CONTEXT_ONLY",
-    "latest_attempt_produced_snapshot": true,
-    "latest_attempt_success": true,
-    "warnings": []
+    "latest_attempt_produced_snapshot": false,
+    "latest_attempt_success": false,
+    "warnings": [
+      "Latest collection failed; retained snapshot is not new evidence"
+    ]
   },
-  "macro_collection_status": "COMPLETE",
-  "macro_collection_errors": {},
+  "macro_collection_status": "FAILED",
+  "macro_collection_errors": {
+    "Growth": "FRED CSV: The read operation timed out | ALFRED vintage CSV: The read operation timed out | FRED series page: The read operation timed out",
+    "Inflation": "FRED CSV: The read operation timed out | ALFRED vintage CSV: The read operation timed out | FRED series page: The read operation timed out",
+    "Credit": "FRED CSV: The read operation timed out | ALFRED vintage CSV: The read operation timed out | FRED series page: The read operation timed out",
+    "Liquidity": "FRED CSV: The read operation timed out | ALFRED vintage CSV: The read operation timed out | FRED series page: The read operation timed out"
+  },
   "source_note": "No 1\u20135 macro score is inferred from Treasury observations."
 }
