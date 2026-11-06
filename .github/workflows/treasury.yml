@@ -17,7 +17,7 @@ jobs:
       contents: write
     outputs:
       attempt: ${{ steps.receipt.outputs.attempt }}
-    runs-on: macos-15
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -30,6 +30,8 @@ jobs:
       - name: Validate research engine before publishing
         run: python -m unittest discover -q
       - name: Collect sources independently and publish evidence reports
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: python hosted_run.py
       - name: Publish workbook field coverage
         run: python gate_coverage.py
