@@ -1,0 +1,71 @@
+name: Macro briefing refresh and health check
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
+permissions:
+  contents: read
+concurrency:
+  group: easymoney-publication
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Refresh, validate and checkpoint public evidence
+        run: |
+          python - <<'PY'
+          import datetime, json, pathlib, time, urllib.request
+          url='https://easymoney-research-desk.aridgiant8.chatgpt.site/api/brief'
+          now=datetime.datetime.now(datetime.timezone.utc)
+          data=None
+          for attempt in range(3):
+              try:
+                  with urllib.request.urlopen(url,timeout=55) as r:
+                      data=json.load(r)
+                  assert data.get('schema_version')==2, 'Unexpected response schema'
+                  assert len(data.get('series',{}))==27, 'Missing source series'
+                  now=datetime.datetime.now(datetime.timezone.utc)
+                  checked=datetime.datetime.fromisoformat(data['checked'].replace('Z','+00:00'))
+                  assert 0 <= (now-checked).total_seconds() < 1800, 'Stale or future collection receipt'
+                  for key, item in data['series'].items():
+                      assert item.get('rows') and item.get('checked'), key+' missing observations'
+                  break
+              except Exception:
+                  if attempt==2: raise
+                  time.sleep(10)
+                  now=datetime.datetime.now(datetime.timezone.utc)
+          health=data.get('health',{})
+          print(json.dumps(health,indent=2))
+          assert health.get('fed_verified'), 'Direct Fed collection unavailable'
+          assert health.get('treasury_verified'), 'Treasury collection unavailable'
+          assert health.get('refreshed',0)>=24, 'Coverage dropped below verified 24-series baseline'
+          pathlib.Path('docs/briefing_snapshot.json').write_text(json.dumps(data,indent=2)+'\n')
+          if health.get('state')!='OK':
+              print('::warning::Partial service: inspect saved source errors and calendar coverage. No claim of full collection.')
+          PY
+      - name: Store validated checkpoint
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/briefing_snapshot.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Checkpoint public macro evidence'
+            git pull --rebase origin main
+            git push
+          fi
+      - name: Read back committed checkpoint
+        run: |
+          git fetch origin main
+          git show origin/main:docs/briefing_snapshot.json > /tmp/verified-briefing.json
+          python - <<'PY'
+          import json
+          a=json.load(open('docs/briefing_snapshot.json'))
+          b=json.load(open('/tmp/verified-briefing.json'))
+          assert a['checked']==b['checked'], 'Checkpoint did not persist'
+          print('Stored and read back:', b['checked'])
+          PY
