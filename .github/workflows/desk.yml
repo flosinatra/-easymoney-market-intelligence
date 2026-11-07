@@ -1,0 +1,70 @@
+name: Research desk evidence
+on:
+  push:
+    branches: [main]
+    paths: ['collect_desk.py', 'test_desk.py', '.github/workflows/desk.yml']
+  workflow_dispatch:
+  schedule:
+    - cron: '35 * * * 1-5'
+concurrency:
+  group: easymoney-publication
+  cancel-in-progress: false
+permissions:
+  contents: read
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      attempt: ${{ steps.receipt.outputs.attempt }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test collection integrity
+        run: python -m unittest test_desk -v
+      - name: Collect macro histories and BLS calendar
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: python collect_desk.py
+      - name: Save dated evidence
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/desk_evidence.json
+          git diff --cached --quiet || (git commit -m 'Refresh research desk source evidence' && git push)
+      - name: Identify collection
+        id: receipt
+        run: python -c "import json; print('attempt=' + json.load(open('docs/desk_evidence.json'))['attempted_at'])" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+  deploy:
+    needs: collect
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.publish.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: publish
+      - name: Verify online collection
+        env:
+          PAGE_URL: ${{ steps.publish.outputs.page_url }}
+          EXPECTED_ATTEMPT: ${{ needs.collect.outputs.attempt }}
+        run: |
+          python - <<'PY'
+          import os, json, urllib.request
+          url=os.environ['PAGE_URL'].rstrip('/')+'/desk_evidence.json?run='+os.environ['GITHUB_RUN_ID']
+          with urllib.request.urlopen(url,timeout=30) as r:d=json.load(r)
+          assert d['attempted_at']==os.environ['EXPECTED_ATTEMPT']
+          assert len(d['series'])==27, d['errors']
+          assert d['live_futures_verified'] is False
+          print('Verified 27 dated FRED histories online. Calendar:',bool(d['calendar']))
+          if not d['calendar']:print('BLS collection incomplete:',d['errors'].get('calendar'))
+          PY
