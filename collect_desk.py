@@ -48,10 +48,31 @@ def fred(sid,today,now):
     public=f'https://fred.stlouisfed.org/graph/fredgraph.csv?cosd={(now-timedelta(days=480)).date().isoformat()}&id={sid}'
     return parse_csv(read(public),sid,today),public
 
+def fred_calendar(now):
+    key=os.getenv('FRED_API_KEY')
+    if not key:raise ValueError('FRED_API_KEY_MISSING')
+    names={'Employment Situation','Consumer Price Index','Producer Price Index','Job Openings and Labor Turnover Survey','Gross Domestic Product','Personal Income and Outlays'}
+    events=[]
+    for offset in [0,1000,2000]:
+        params=dict(file_type='json',realtime_start=now.date().isoformat(),realtime_end=(now+timedelta(days=45)).date().isoformat(),include_release_dates_with_no_data='true',sort_order='asc',limit=1000,offset=offset)
+        url='https://api.stlouisfed.org/fred/releases/dates?'+urlencode(params)
+        try:d=json.loads(read(url+'&'+urlencode(dict(api_key=key))))
+        except Exception:raise ValueError('FRED calendar request failed') from None
+        for r in d.get('release_dates',[]):
+            if r.get('release_name') in names:
+                day=datetime.strptime(r['date'],'%Y-%m-%d').date().isoformat()
+                events.append(dict(day=day,time=None,name=r['release_name']))
+        if offset+1000>=int(d.get('count',0)):break
+    else:raise ValueError('FRED calendar pagination incomplete')
+    if not events:raise ValueError('No supported release dates')
+    return dict(events=events,kind='hosted release dates',checked=now.isoformat(),source='https://fred.stlouisfed.org/releases/calendar',times_verified=False)
+
 def collect(now=None):
     now=now or datetime.now(timezone.utc); checked=now.isoformat();today=now.date().isoformat()
-    out=dict(schema_version=1,attempted_at=checked,series={},errors={},calendar=None,live_futures_verified=False)
+    out=dict(schema_version=1,attempted_at=checked,series={},errors={},calendar=None,live_futures_verified=False,fred_api_configured=bool(os.getenv('FRED_API_KEY')))
     def one(sid):
+        if os.getenv('REQUIRE_FRED_API_KEY')=='true' and not os.getenv('FRED_API_KEY'):
+            return sid,None,'FRED_API_KEY_MISSING'
         try:
             rows,url=fred(sid,today,now)
             return sid,dict(rows=rows,checked=checked,kind='hosted collection',source=url),None
@@ -61,7 +82,9 @@ def collect(now=None):
             if error:out['errors'][sid]=error
             else:out['series'][sid]=value
     try:out['calendar']=dict(events=parse_calendar(read('https://www.bls.gov/schedule/news_release/bls.ics')),kind='hosted collection',checked=checked,source='https://www.bls.gov/schedule/news_release/bls.ics')
-    except Exception as e:out['errors']['calendar']=type(e).__name__+': '+str(e)[:150]
+    except Exception:
+        try:out['calendar']=fred_calendar(now)
+        except Exception:out['errors']['calendar']='BLS unavailable; FRED release-date fallback requires a working FRED_API_KEY'
     out['status']='COMPLETE' if len(out['series'])==len(IDS) and out['calendar'] else 'PARTIAL'
     return out
 if __name__=='__main__':
