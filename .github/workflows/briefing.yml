@@ -19,14 +19,14 @@ jobs:
       - name: Refresh, validate and checkpoint public evidence
         run: |
           python - <<'PY'
-          import datetime, json, pathlib, time, urllib.request
+          import datetime, json, pathlib, time, subprocess
           url='https://easymoney-research-desk.aridgiant8.chatgpt.site/api/brief'
           now=datetime.datetime.now(datetime.timezone.utc)
           data=None
           for attempt in range(3):
               try:
-                  with urllib.request.urlopen(url,timeout=55) as r:
-                      data=json.load(r)
+                  response=subprocess.run(['curl','--fail','--silent','--show-error','--location','--max-time','55',url],check=True,capture_output=True,text=True)
+                  data=json.loads(response.stdout)
                   assert data.get('schema_version')==2, 'Unexpected response schema'
                   assert len(data.get('series',{}))==27, 'Missing source series'
                   now=datetime.datetime.now(datetime.timezone.utc)
