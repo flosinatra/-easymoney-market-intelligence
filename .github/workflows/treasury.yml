@@ -42,7 +42,7 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -- docs/
-          git diff --cached --quiet || (git commit -m 'Update Treasury evidence' && git push)
+          git diff --cached --quiet || (git commit -m 'Update Treasury evidence' && git pull --rebase origin main && git push)
       - name: Identify collection attempt
         id: receipt
         run: python -c "import json; print('attempt=' + json.load(open('docs/hosted_collection_receipt.json'))['attempted_at_utc'])" >> "$GITHUB_OUTPUT"
