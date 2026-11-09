@@ -1,9 +1,9 @@
 {
-  "as_of_utc": "2026-11-07T13:14:08.625968+00:00",
+  "as_of_utc": "2026-11-09T23:50:46.222267+00:00",
   "pipeline": "REPORTS_BUILT",
   "treasury_status": "DAILY_NOMINAL_RATE_CONTEXT_ONLY",
-  "macro_context_status": "CONTEXT_AVAILABLE_UNSCORED",
-  "macro_context_available_factors": 4,
+  "macro_context_status": "STALE_OR_INVALID_RETRIEVAL",
+  "macro_context_available_factors": 0,
   "factor_evidence_status": "EVIDENCE_INCOMPLETE",
   "weekly_regime_status": "NOT_ASSESSED",
   "automated_macro_score_available": false,
@@ -11,14 +11,15 @@
   "collector_run_verified": false,
   "macro_collection_reconciliation": {
     "latest_attempt_status": "FAILED",
-    "latest_attempt_utc": "2026-11-07T13:09:07.842069+00:00",
+    "latest_attempt_utc": "2026-11-09T23:45:45.570196+00:00",
     "snapshot_utc": "2026-11-06T10:28:18.470084+00:00",
-    "snapshot_age_hours": 26.76,
-    "snapshot_status": "CURRENT_CONTEXT_ONLY",
+    "snapshot_age_hours": 85.37,
+    "snapshot_status": "STALE_CONTEXT_ONLY",
     "latest_attempt_produced_snapshot": false,
     "latest_attempt_success": false,
     "warnings": [
-      "Latest collection failed; retained snapshot is not new evidence"
+      "Latest collection failed; retained snapshot is not new evidence",
+      "Retained snapshot exceeds freshness threshold"
     ]
   },
   "macro_collection_status": "FAILED",
