@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-10T23:13:15.758030+00:00",
+  "attempted_at": "2026-11-11T00:07:42.888182+00:00",
   "series": {},
   "errors": {
     "INDPRO": "FRED_API_KEY_MISSING",
