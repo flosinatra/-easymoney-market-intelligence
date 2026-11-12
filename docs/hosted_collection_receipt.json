@@ -1,7 +1,7 @@
 {
-  "attempted_at_utc": "2026-11-11T23:53:34.938233+00:00",
+  "attempted_at_utc": "2026-11-12T23:49:47.224714+00:00",
   "treasury": "COLLECTION_SUCCEEDED",
-  "treasury_observation_date": "2026-11-10",
+  "treasury_observation_date": "2026-11-12",
   "macro": "COLLECTION_FAILED_OR_UNVERIFIED",
   "macro_collected_series": 0,
   "macro_failed_factors": [
