@@ -75,7 +75,7 @@
           103.9506
         ]
       ],
-      "checked": "2026-11-13T15:01:56.486Z",
+      "checked": "2026-11-13T16:01:38.776Z",
       "kind": "refreshed",
       "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=INDPRO"
     },
@@ -154,7 +154,7 @@
           337.476
         ]
       ],
-      "checked": "2026-11-13T15:01:56.486Z",
+      "checked": "2026-11-13T16:01:38.776Z",
       "kind": "refreshed",
       "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL"
     },
@@ -233,7 +233,7 @@
           339.9
         ]
       ],
-      "checked": "2026-11-13T15:01:56.486Z",
+      "checked": "2026-11-13T16:01:38.776Z",
       "kind": "refreshed",
       "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPILFESL"
     },
@@ -312,7 +312,7 @@
           132.257
         ]
       ],
-      "checked": "2026-11-13T15:01:56.486Z",
+      "checked": "2026-11-13T16:01:38.776Z",
       "kind": "refreshed",
       "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPI"
     },
@@ -391,7 +391,7 @@
           130.902
         ]
       ],
-      "checked": "2026-11-13T15:01:56.486Z",
+      "checked": "2026-11-13T16:01:38.776Z",
       "kind": "refreshed",
       "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPILFE"
     },
@@ -470,7 +470,7 @@
           159293
         ]
       ],
-      "checked": "2026-11-13T15:01:56.486Z",
+      "checked": "2026-11-13T16:01:38.776Z",
       "kind": "refreshed",
       "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PAYEMS"
     },
@@ -549,7 +549,7 @@
           4.1
         ]
       ],
-      "checked": "2026-11-13T15:01:56.486Z",
+      "checked": "2026-11-13T16:01:38.776Z",
       "kind": "refreshed",
       "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE"
     },
@@ -628,7 +628,7 @@
           24611.077
         ]
       ],
-      "checked": "2026-11-13T15:01:56.486Z",
+      "checked": "2026-11-13T16:01:38.776Z",
       "kind": "refreshed",
       "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=GDPC1"
     },
@@ -707,7 +707,7 @@
           16977.6
         ]
       ],
-      "checked": "2026-11-13T15:01:56.486Z",
+      "checked": "2026-11-13T16:01:38.776Z",
       "kind": "refreshed",
       "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEC96"
     },
@@ -786,7 +786,7 @@
           4.73
         ]
       ],
-      "checked": "2026-11-13T15:01:56.486Z",
+      "checked": "2026-11-13T16:01:38.776Z",
       "kind": "refreshed",
       "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2"
     },
@@ -865,7 +865,7 @@
           4.98
         ]
       ],
-      "checked": "2026-11-13T15:01:56.486Z",
+      "checked": "2026-11-13T16:01:38.776Z",
       "kind": "refreshed",
       "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10"
     },
@@ -944,7 +944,7 @@
           2.78
         ]
       ],
-      "checked": "2026-11-13T15:01:56.486Z",
+      "checked": "2026-11-13T16:01:38.776Z",
       "kind": "refreshed",
       "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10"
     },
@@ -1023,7 +1023,7 @@
           2.24
         ]
       ],
-      "checked": "2026-11-13T15:01:56.486Z",
+      "checked": "2026-11-13T16:01:38.776Z",
       "kind": "refreshed",
       "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=T10YIE"
     },
@@ -1102,7 +1102,7 @@
           3.3
         ]
       ],
-      "checked": "2026-11-13T15:01:56.486Z",
+      "checked": "2026-11-13T16:01:38.776Z",
       "kind": "refreshed",
       "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLH0A0HYM2"
     },
@@ -1181,7 +1181,7 @@
           0.9
         ]
       ],
-      "checked": "2026-11-13T15:01:56.486Z",
+      "checked": "2026-11-13T16:01:38.776Z",
       "kind": "refreshed",
       "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLC0A0CM"
     },
@@ -1260,7 +1260,7 @@
           6758867
         ]
       ],
-      "checked": "2026-11-13T15:01:56.486Z",
+      "checked": "2026-11-13T16:01:38.776Z",
       "kind": "refreshed",
       "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=WALCL"
     },
@@ -1418,7 +1418,7 @@
           914370
         ]
       ],
-      "checked": "2026-11-13T15:01:56.486Z",
+      "checked": "2026-11-13T16:01:38.776Z",
       "kind": "refreshed",
       "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=WTREGEN"
     },
@@ -1497,7 +1497,7 @@
           0.25
         ]
       ],
-      "checked": "2026-11-13T15:01:56.486Z",
+      "checked": "2026-11-13T16:01:38.776Z",
       "kind": "refreshed",
       "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RRPONTSYD"
     },
@@ -1734,16 +1734,12 @@
           -0.462
         ]
       ],
-      "checked": "2026-11-13T15:01:56.486Z",
+      "checked": "2026-11-13T16:01:38.776Z",
       "kind": "refreshed",
       "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NFCI"
     },
     "VIXCLS": {
       "rows": [
-        [
-          "2026-10-19",
-          18.44
-        ],
         [
           "2026-10-20",
           17.31
@@ -1811,9 +1807,13 @@
         [
           "2026-11-11",
           17.49
+        ],
+        [
+          "2026-11-12",
+          18.7
         ]
       ],
-      "checked": "2026-11-13T15:01:56.486Z",
+      "checked": "2026-11-13T16:01:38.776Z",
       "kind": "refreshed",
       "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS"
     },
@@ -1892,7 +1892,7 @@
           7619.38
         ]
       ],
-      "checked": "2026-11-13T15:01:56.486Z",
+      "checked": "2026-11-13T16:01:38.776Z",
       "kind": "refreshed",
       "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=SP500"
     },
@@ -1971,7 +1971,7 @@
           28289.19
         ]
       ],
-      "checked": "2026-11-13T15:01:56.486Z",
+      "checked": "2026-11-13T16:01:38.776Z",
       "kind": "refreshed",
       "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NASDAQ100"
     },
@@ -2050,7 +2050,7 @@
           121.8803
         ]
       ],
-      "checked": "2026-11-13T15:01:56.486Z",
+      "checked": "2026-11-13T16:01:38.776Z",
       "kind": "refreshed",
       "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS"
     },
@@ -2129,7 +2129,7 @@
           89.62
         ]
       ],
-      "checked": "2026-11-13T15:01:56.486Z",
+      "checked": "2026-11-13T16:01:38.776Z",
       "kind": "refreshed",
       "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILWTICO"
     }
@@ -2904,24 +2904,24 @@
         "value": 3.9
       }
     ],
-    "checked": "2026-11-13T15:01:56.486Z",
+    "checked": "2026-11-13T16:01:38.776Z",
     "kind": "direct official collection",
     "source": "https://markets.newyorkfed.org/api/rates/all/latest.json"
   },
-  "checkpoint_at": "2026-11-13T13:25:00.925Z",
+  "checkpoint_at": "2026-11-13T15:01:56.486Z",
   "collector": {
-    "attempted_at": "2026-11-13T13:46:37.457448+00:00",
+    "attempted_at": "2026-11-13T15:19:31.070634+00:00",
     "status": "PARTIAL"
   },
-  "checked": "2026-11-13T15:01:56.486Z",
+  "checked": "2026-11-13T16:01:38.776Z",
   "health": {
     "state": "DEGRADED",
-    "checked": "2026-11-13T15:01:56.486Z",
+    "checked": "2026-11-13T16:01:38.776Z",
     "refreshed": 24,
     "total": 27,
     "fed_verified": true,
     "treasury_verified": true,
-    "checkpoint_at": "2026-11-13T13:25:00.925Z",
+    "checkpoint_at": "2026-11-13T15:01:56.486Z",
     "errors": {
       "WRESBAL": "Automatic FRED refresh unavailable: HTTP 520",
       "SOFR": "Automatic FRED refresh unavailable: HTTP 520",
