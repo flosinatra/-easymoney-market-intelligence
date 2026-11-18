@@ -33,35 +33,35 @@
           "field": "US10Y Yield",
           "audit_status": "Candidate, untested",
           "evidence_status": "DAILY_OBSERVATION_ONLY",
-          "value": 5.12
+          "value": 5.1
         },
         {
           "cell": "D2",
           "field": "US05Y Yield",
           "audit_status": "Candidate, untested",
           "evidence_status": "DAILY_OBSERVATION_ONLY",
-          "value": 4.93
+          "value": 4.9
         },
         {
           "cell": "E2",
           "field": "US02Y Yield",
           "audit_status": "Candidate, untested",
           "evidence_status": "DAILY_OBSERVATION_ONLY",
-          "value": 4.83
+          "value": 4.8
         },
         {
           "cell": "F2",
           "field": "US01Y Yield",
           "audit_status": "Candidate, untested",
           "evidence_status": "DAILY_OBSERVATION_ONLY",
-          "value": 4.62
+          "value": 4.6
         },
         {
           "cell": "G2",
           "field": "US03M Yield",
           "audit_status": "Candidate, untested",
           "evidence_status": "DAILY_OBSERVATION_ONLY",
-          "value": 4.34
+          "value": 4.33
         },
         {
           "cell": "H2",
@@ -957,7 +957,7 @@
       }
     ]
   },
-  "treasury_observation_date": "2026-11-16",
+  "treasury_observation_date": "2026-11-17",
   "live_market_data_verified": false,
   "all_gates_complete": false
 }
