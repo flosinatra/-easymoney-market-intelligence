@@ -4,10 +4,10 @@
   "gate_result": "NOT_ASSESSED",
   "execution_status": "NOT_ASSESSED",
   "source": "U.S. Treasury daily par yields",
-  "observation_date": "2026-11-23",
-  "retrieved_at_utc": "2026-11-23T23:56:39.005065+00:00",
+  "observation_date": "2026-11-24",
+  "retrieved_at_utc": "2026-11-24T23:54:51.439715+00:00",
   "curve_spreads_basis_points": {
-    "10Y minus 2Y": 29.0,
+    "10Y minus 2Y": 28.0,
     "10Y minus 3M": 55.0
   },
   "evidence_status": "DAILY_CURVE_CONTEXT_ONLY",
