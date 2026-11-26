@@ -2,50 +2,50 @@
   "Rates": [
     {
       "indicator": "US Treasury 2-year nominal yield",
-      "value": 4.63,
+      "value": 4.61,
       "unit": "percent",
-      "observation_date": "2026-11-24",
+      "observation_date": "2026-11-25",
       "published_date": null,
       "source": "US Treasury",
       "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value_month=202611",
       "publication_date_verified": false,
-      "retrieval_date": "2026-11-24",
+      "retrieval_date": "2026-11-25",
       "note": "Publication date unverified; retrieval date is not substituted as publication date."
     },
     {
       "indicator": "US Treasury 5-year nominal yield",
-      "value": 4.69,
+      "value": 4.65,
       "unit": "percent",
-      "observation_date": "2026-11-24",
+      "observation_date": "2026-11-25",
       "published_date": null,
       "source": "US Treasury",
       "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value_month=202611",
       "publication_date_verified": false,
-      "retrieval_date": "2026-11-24",
+      "retrieval_date": "2026-11-25",
       "note": "Publication date unverified; retrieval date is not substituted as publication date."
     },
     {
       "indicator": "US Treasury 10-year nominal yield",
-      "value": 4.91,
+      "value": 4.85,
       "unit": "percent",
-      "observation_date": "2026-11-24",
+      "observation_date": "2026-11-25",
       "published_date": null,
       "source": "US Treasury",
       "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value_month=202611",
       "publication_date_verified": false,
-      "retrieval_date": "2026-11-24",
+      "retrieval_date": "2026-11-25",
       "note": "Publication date unverified; retrieval date is not substituted as publication date."
     },
     {
       "indicator": "US Treasury 30-year nominal yield",
-      "value": 5.3,
+      "value": 5.24,
       "unit": "percent",
-      "observation_date": "2026-11-24",
+      "observation_date": "2026-11-25",
       "published_date": null,
       "source": "US Treasury",
       "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value_month=202611",
       "publication_date_verified": false,
-      "retrieval_date": "2026-11-24",
+      "retrieval_date": "2026-11-25",
       "note": "Publication date unverified; retrieval date is not substituted as publication date."
     }
   ]

@@ -2,14 +2,14 @@
   "factor": "Rates",
   "status": "DAILY_NOMINAL_RATE_CONTEXT_ONLY",
   "source": "U.S. Treasury daily par yield curve",
-  "observation_date": "2026-11-24",
-  "retrieved_at_utc": "2026-11-24T23:54:51.439715+00:00",
+  "observation_date": "2026-11-25",
+  "retrieved_at_utc": "2026-11-25T23:55:37.928060+00:00",
   "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value_month=202611",
   "observations": {
-    "2-year_yield_percent": 4.63,
-    "5-year_yield_percent": 4.69,
-    "10-year_yield_percent": 4.91,
-    "30-year_yield_percent": 5.3
+    "2-year_yield_percent": 4.61,
+    "5-year_yield_percent": 4.65,
+    "10-year_yield_percent": 4.85,
+    "30-year_yield_percent": 5.24
   },
   "score_1_to_5": null,
   "scoring_status": "REQUIRES_EXISTING_WORKBOOK_JUDGMENT",
