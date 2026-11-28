@@ -1,0 +1,27 @@
+{
+  "dataset": "Daily Treasury Par Yield Curve Rates",
+  "intraday_quote": false,
+  "live_intraday_market_data_verified": false,
+  "note": "Official daily yield curve observation; not an intraday futures feed or trade signal.",
+  "observation_count": 18,
+  "observation_date": "2026-11-27",
+  "publication_time_verified": false,
+  "research_ready": false,
+  "retrieved_at_utc": "2026-11-27T23:57:26.756426+00:00",
+  "source": "US Treasury",
+  "source_file_sha256": "ca99f1e46e29249484acbdb1cbf60145fb15ac673d0e9e1deedd658ef49d27b7",
+  "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value_month=202611",
+  "yields_percent": {
+    "10y": 4.94,
+    "1m": 4.27,
+    "1y": 4.61,
+    "20y": 5.36,
+    "2y": 4.69,
+    "30y": 5.33,
+    "3m": 4.35,
+    "3y": 4.72,
+    "5y": 4.74,
+    "6m": 4.46,
+    "7y": 4.82
+  }
+}
